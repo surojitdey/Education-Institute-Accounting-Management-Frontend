@@ -1,7 +1,6 @@
 <template>
   <nav>
     <v-app-bar flat app color="accent-4" clipped-left elevation="2">
-      <!-- <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon> -->
       <v-btn icon @click="drawer = !drawer">
         <v-icon>menu</v-icon>
       </v-btn>
