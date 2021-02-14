@@ -5,15 +5,8 @@
       <v-btn icon @click="drawer = !drawer">
         <v-icon>menu</v-icon>
       </v-btn>
-
-      <!-- change the image path according to your path -->
-      <!-- <img src="/surojit/JIST/dist/logo.jpg" alt="" width="350" height="60"> -->
-      <!-- <img src="/dist/logo.jpg" alt="" width="350" height="60"> -->
-      <!-- <img src="/logo.jpg" alt="" width="350" height="60"> -->
-      <img :src="logo_url" alt="" width="350" height="60">
       <v-spacer></v-spacer>
 
-      <!-- <div class="grey--text text--darken-2 welcomeMessage">Welcome <span class="font-weight-bold">Admin</span></div> -->
       <div class="grey--text text--darken-2 welcomeMessage" v-if="isLoggedIn">Welcome <span class="font-weight-bold">Admin</span></div>
       <v-divider vertical class="pr-4"></v-divider>
 
@@ -25,8 +18,6 @@
       </v-btn>
     </v-app-bar>
 
-
-    <!-- <v-navigation-drawer app clipped class="navDrawerBorder" v-model="drawer"> -->
     <div v-if="isLoggedIn">
       <v-navigation-drawer app clipped class="navDrawerBorder" v-model="drawer">
         <v-list>
@@ -71,8 +62,6 @@ export default {
     return {
       logo_url: '',
       drawer: this.$store.state.drawer,
-      // isPassword: false,
-      // isActive: false,
       links: [
         { icon: 'dashboard', text: 'Overview', route: '/'},
         { icon: 'person', text: 'Students', route: '/student'},
@@ -120,8 +109,6 @@ export default {
 
   mounted() {
     this.logo_url = this.$store.state.logo_url
-    // isPassword = this.$store.getters.isPassword
-    // drawer = this.$store.state.drawer
   },
 
   computed: {
